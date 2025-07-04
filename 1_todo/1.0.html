@@ -1,0 +1,27 @@
+<!-- simple array based todo app 
+ frontend :tailwind  
+ functionalities: add , delete-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-700">
+    <div class="flex flex-col gap-3">
+
+        <div class="flex flex-row gap-2 mb-6">
+            <input class="border rounded-lg text-center bg-white " type="text" placeholder="Enter-Text">
+            <button id="Add" class="bg-green-300 p-3 rounded-lg" >Add</button>
+        </div>
+
+        <div id="todos" class="text-white  flex flex-col gap-2">
+        </div>
+    </div>
+    <script src="./1.0.js"></script>
+</body>
+</html>
