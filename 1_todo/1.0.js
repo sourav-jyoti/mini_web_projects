@@ -4,7 +4,7 @@ function rendertodo(text){
     const dtodo=document.createElement("div");
     const ptodo=document.createElement("p");
     const btodo=document.createElement("button");
-  
+
     ptodo.textContent = `${todos.indexOf(text)+1}. ` + text;
 
     btodo.textContent = "delete";
@@ -48,7 +48,7 @@ document.getElementById("todos").addEventListener('click',(event)=>{
 
         //updating the index on page
         document.getElementById("todos").innerHTML='';//clear
-        todos.forEach((text)=> newtodo(text));//re-render with update indices
+        todos.forEach((text)=> rendertodo(text));//re-render with update indices
     }
 })
 
