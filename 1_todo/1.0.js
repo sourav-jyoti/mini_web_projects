@@ -15,7 +15,7 @@ function rendertodo(text){
     dtodo.id=`delete-${todos.indexOf(text)+1}`;
     dtodo.classList.add('flex','flex-row','gap-2');
 
-    dtodo.appendChild(ptodo,btodo);
+    dtodo.append(ptodo,btodo);
     
     document.getElementById("todos").appendChild(dtodo);
 }
