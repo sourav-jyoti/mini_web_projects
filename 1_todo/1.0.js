@@ -1,6 +1,6 @@
 let todos = [];
 
-function newtodo(text){
+function rendertodo(text){
     const dtodo=document.createElement("div");
     const ptodo=document.createElement("p");
     const btodo=document.createElement("button");
@@ -28,7 +28,7 @@ const text = input.value;
 todos.push(text);
 
 //newtodo creation
-newtodo(text);
+rendertodo(text);
 
 //clear input box
 input.value='';
@@ -56,5 +56,5 @@ document.getElementById("todos").addEventListener('click',(event)=>{
 
 ///bug : if two todos are same there index on page appears same
 ///To fix this, use the array's length
-/// line 32 : newtodo(text, todos.length - 1);
+/// line 32 : rendertodo(text, todos.length - 1);
 /// line 3 : function newtodo(text, index)
