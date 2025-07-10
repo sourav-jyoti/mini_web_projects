@@ -1,4 +1,4 @@
-import { useRef,useEffect, useState } from 'react'
+import { useEffect,useRef,useEffect, useState } from 'react'
 
 import './App.css'
 
@@ -10,7 +10,9 @@ function App() {
   const [specialchcheck, setspecialchcheck] = useState(true);
   const inputRef = useRef();
 
-  function passGenerator () {
+ 
+  const passGenerator = useCallback(() =>{
+
     let genString = "abcdefghigklmnopqrstuvwxyz";
 
     let tempPass="";
@@ -25,7 +27,7 @@ function App() {
     }
 
     setpassword((prev)=>prev=tempPass);
-  }
+  },[length,numcheck,specialchcheck])
 
   useEffect(() => {
     passGenerator();
