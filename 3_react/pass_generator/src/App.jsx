@@ -1,4 +1,4 @@
-import { useEffect,useRef,useEffect, useState } from 'react'
+import { useCallback,useRef,useEffect, useState } from 'react'
 
 import './App.css'
 
@@ -55,7 +55,7 @@ function App() {
         <div className='flex text-sm gap-x-2'>
           <div className='flex items-center gap-x-1 '>
             <input type="range" max={30} min={5} name="length" step={1} value={length} onChange={(e)=>setlength((prev)=> prev = e.target.value)}/> 
-            <label htmlFor="length" >Length</label>
+            <label htmlFor="length" >Length {length}</label>
           </div>
         </div>
         
